@@ -1,5 +1,15 @@
 /* Versão final — correções aprovadas de desktop e mobile */
 
+/* Regra editorial reutilizável: palavras e blocos semânticos ficam íntegros. */
+.editorial-title__line {
+  white-space: nowrap;
+}
+
+.editorial-title {
+  hyphens: none;
+  word-break: keep-all;
+}
+
 .header-cta-mobile {
   display: none;
 }
@@ -210,6 +220,25 @@
   .contact__social-link {
     width: max-content;
     max-width: 100%;
+  }
+
+  /* Quatro pausas editoriais controladas para o título de impacto. */
+  #impact-title.editorial-title {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(1.9rem, 9.4vw, 2.45rem);
+    line-height: 0.9;
+    overflow-wrap: normal;
+  }
+
+  #impact-title .editorial-title__line {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+  }
+
+  #impact-title .editorial-title__desktop-break {
+    display: none;
   }
 
   /* Rodapé como um único bloco visual centralizado. */
